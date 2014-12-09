@@ -1,0 +1,40 @@
+﻿@using WallPostByTechBrij.Models
+@model WallPostByTechBrij.Models.UserProfile
+@{
+    ViewBag.Title = "_LinkPartial";
+    UserProfile aUser = (UserProfile)Session["UserProfile"];
+
+}
+
+@{
+    if (aUser != null)
+    {
+        //here not use FavoriteSaying, here use photopath
+        if (aUser.Country != null)
+        {
+            <div style="float: left; width: 150px; height: 150px; margin-left: 150px; background: green">
+                <img src=@Url.Content(aUser.Country) style="width: 150px; height: 150px; background-image: url(~/Images/ProfileImages/user.png);" />
+                @Html.ActionLink("Edit Profile", "Edit", "Profile")
+
+                @*<img src="E:\Mvc_Practice\LogInTry\LogInTry\Image\993765_541569682573449_1524994842_n.jpg" />*@
+            </div>
+            <div style="clear: both">
+
+            </div>
+        }
+        else
+        {
+            <div style="float: left; width: 150px; height: 150px; background: red; margin: 150px;">
+
+            </div>
+            <div style="clear: both">
+
+            </div>
+        }
+
+    }
+
+
+
+}
+

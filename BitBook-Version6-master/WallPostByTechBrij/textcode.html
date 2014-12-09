@@ -1,0 +1,41 @@
+﻿***************_ProfilePicturePartial
+
+ if (aUser != null)
+    {
+        //here not use FavoriteSaying, here use photopath
+        if (aUser.FavoriteSaying != null)
+        {
+<div style="float: left; width: 150px; height: 150px; margin-left: 150px; background: green">
+    <img src=@Url.Content(aUser.FavoriteSaying) style="width: 150px; height: 150px; background-image: url(~/Images/ProfileImages/user.png);" />
+    @*@Html.ActionLink("Edit Profile", "Edit", "User")*@
+
+    @*<img src="E:\Mvc_Practice\LogInTry\LogInTry\Image\993765_541569682573449_1524994842_n.jpg" />*@
+</div>
+<div style="clear: both">
+
+</div>
+        }
+        else
+        {
+<div style="float: left; width: 150px; height: 150px; background: red; margin: 150px;">
+
+</div>
+<div style="clear: both">
+
+</div>
+        }
+
+    }
+
+************************************Database
+CREATE TABLE [dbo].[User] (
+    [UserId]                   INT              IDENTITY (1, 1) NOT NULL,
+    [UserName]                 NVARCHAR (MAX)   NULL,
+    [FirstName]                NVARCHAR (MAX)   NULL,
+    [LastName]                 NVARCHAR (MAX)   NULL,
+    [Address]                  NVARCHAR (MAX)   NULL,
+  [Country]                  NVARCHAR (MAX)   NULL,
+  [Email]                  NVARCHAR (MAX)   NULL,
+  [Gender]                  NVARCHAR (MAX)   NULL,
+  [Mobile]                  NVARCHAR (MAX)   NULL,
+    PRIMARY KEY CLUSTERED ([UserId] ASC)

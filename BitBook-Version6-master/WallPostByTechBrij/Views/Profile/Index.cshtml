@@ -1,0 +1,83 @@
+﻿
+
+@using WallPostByTechBrij.Models
+@model WallPostByTechBrij.Models.UserProfile
+
+@{
+    ViewBag.Title = "Index";
+    UserProfile userProfile=new UserProfile();
+    userProfile = (UserProfile)Session["UserProfile"];
+  
+}
+
+<h2>Welcome @userProfile.UserName </h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => userProfile.UserName)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => userProfile.FirstName)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => userProfile.LastName)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => userProfile.Email)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => userProfile.Gender)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => userProfile.Mobile)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => userProfile.Address)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayFor(modelItem => userProfile.Country)
+        </th>
+    </tr>
+
+
+
+</table>

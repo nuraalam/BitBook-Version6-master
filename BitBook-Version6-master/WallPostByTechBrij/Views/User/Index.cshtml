@@ -1,0 +1,76 @@
+﻿@using WallPostByTechBrij.Models
+@model IEnumerable<WallPostByTechBrij.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+   User aUser=new User();
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <h2>Welcome  </h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => aUser.UserName)
+            </th>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => aUser.Email)
+            </th>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => aUser.Gender)
+            </th>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => aUser.Mobile)
+            </th>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => aUser.Address)
+            </th>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => aUser.Country)
+            </th>
+        </tr>
+
+
+
+    </table>
+
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.UserId })*@ 
+        
+    
+
+
+</table>
